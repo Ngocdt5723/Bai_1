@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Protest Revolution', sans-serif;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  min-height: 80vh;
+  background: #222;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ring {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+  border-radius: 30% 63% 63% 37% / 42% 45% 56% 59%;
+  animation: arr 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 30% 53% 63% 47% / 42% 45% 66% 47%;
+  animation: arr2 6s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 36% 53% 63% 47% / 42% 65% 47% 49%;
+  animation: arr 6s linear infinite;
+}
+
+.ring:hover i {
+  border: 5px solid var(--clr);
+  filter: drop-shadow(0px 0px 10px var(--clr));
+}
+
+@keyframes arr {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes arr2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  width: 250px;
+  height: 80%;
+  gap: 20px;
+}
+
+.login h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+.login .inputBX {
+  position: relative;
+  width: 100%;
+}
+
+.login .inputBX input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.login .inputBX input[type='submit'] {
+  width: 100%;
+  background: #0078ff;
+  background: linear-gradient(45deg, #ff357a, #fff172);
+  border: none;
+  cursor: pointer;
+}
+
+.login .inputBX input::placeholder {
+  color: rgba(192, 192, 192, 0.75);
+}
+
+.login .links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
